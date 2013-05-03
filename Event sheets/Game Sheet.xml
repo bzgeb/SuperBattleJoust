@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Sheet</name>
+    <events>
+        <variable constant="0" name="Waiting" sid="72" static="0" type="number">1</variable>
+        <event-block sid="12">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="13" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="14" type="LeftJouster">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="15">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="16" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="17" type="LeftJouster">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="18">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="19" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="20" type="LeftJouster">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="21">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="22" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="23" type="RightJouster">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="24">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="25" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="26" type="RightJouster">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="27">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="28" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="29" type="RightJouster">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="31">
+            <conditions>
+                <condition id="3" name="On key released" sid="32" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="37" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="35" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="33">
+            <conditions>
+                <condition id="3" name="On key released" sid="34" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="38" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="36" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="39">
+            <conditions>
+                <condition id="3" name="On key released" sid="40" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="45" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="43" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="41">
+            <conditions>
+                <condition id="3" name="On key released" sid="42" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="46" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="44" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="49">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="51" type="System" />
+                <condition id="-14" name="Compare variable" sid="73" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="0" name="Apply force" sid="52" type="LeftJouster">
+                    <param id="0" name="Force X">7</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="0" name="Apply force" sid="54" type="RightJouster">
+                    <param id="0" name="Force X">-7</param>
+                    <param id="1" name="Force Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="55">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="56" type="LeftJouster">
+                    <param id="0" name="Object">RightJouster</param>
+                </condition>
+                <condition id="-7" inverted="1" name="Compare instance variable" sid="59" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">RightJouster.WeaponPos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="64" type="Status">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="61" type="Status">
+                    <param id="0" name="Text">&quot;KILL!&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="91" type="Winner">
+                    <param id="0" name="Text">&quot;WINNER: LEFT&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="62" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="63" type="Status">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="87" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="65">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="66" type="LeftJouster">
+                    <param id="0" name="Object">RightJouster</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="67" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">RightJouster.WeaponPos</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="68" type="Status">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="69" type="Status">
+                    <param id="0" name="Text">&quot;SAFE!&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="92" type="Winner">
+                    <param id="0" name="Text">&quot;WINNER: RIGHT&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="70" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="71" type="Status">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="89" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="74">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="75" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="93" type="Winner">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="88" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="77" type="Status">
+                    <param id="0" name="Text">&quot;3&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="78" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="79" type="Status">
+                    <param id="0" name="Text">&quot;2&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="80" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="81" type="Status">
+                    <param id="0" name="Text">&quot;1&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="82" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Set text" sid="83" type="Status">
+                    <param id="0" name="Text">&quot;JOUST&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="84" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="85" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
