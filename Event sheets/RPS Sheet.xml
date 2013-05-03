@@ -4,90 +4,6 @@
     <name>RPS Sheet</name>
     <events>
         <variable constant="0" name="Waiting2" sid="178" static="0" type="number">1</variable>
-        <event-block sid="179">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="180" type="LeftJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="181" type="LeftJouster">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="182">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="183" type="LeftJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="184" type="LeftJouster">
-                    <param id="0" name="Frame number">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="185">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="186" type="LeftJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="187" type="LeftJouster">
-                    <param id="0" name="Frame number">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="188">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="189" type="RightJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="190" type="RightJouster">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="191">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="192" type="RightJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="193" type="RightJouster">
-                    <param id="0" name="Frame number">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="194">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="195" type="RightJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="196" type="RightJouster">
-                    <param id="0" name="Frame number">3</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="197">
             <conditions>
                 <condition id="3" name="On key released" sid="198" type="Keyboard">
@@ -106,6 +22,53 @@
             <conditions>
                 <condition id="3" name="On key released" sid="202" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="252" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="253" type="LeftJouster">
+                    <param id="0" name="Impulse X">10</param>
+                    <param id="1" name="Implulse Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="256">
+            <conditions>
+                <condition id="3" name="On key released" sid="257" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="258" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="259" type="LeftJouster">
+                    <param id="0" name="Object">XbowBolt</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="265" type="XbowBolt">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="288">
+            <conditions>
+                <condition id="3" name="On key released" sid="289" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="290" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
                 </condition>
             </conditions>
             <actions />
@@ -129,6 +92,56 @@
                 <condition id="3" name="On key released" sid="210" type="Keyboard">
                     <param id="0" name="Key">40 (Down arrow)</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="254" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="255" type="RightJouster">
+                    <param id="0" name="Impulse X">-10</param>
+                    <param id="1" name="Implulse Y">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="282">
+            <conditions>
+                <condition id="3" name="On key released" sid="283" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="284" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="285" type="RightJouster">
+                    <param id="0" name="Object">XbowBolt</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="286" type="XbowBolt">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-10" name="Set value" sid="287" type="XbowBolt">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="293">
+            <conditions>
+                <condition id="3" name="On key released" sid="294" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="295" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
             </conditions>
             <actions />
         </event-block>
@@ -136,24 +149,24 @@
             <conditions>
                 <condition id="-1" name="Every tick" sid="214" type="System" />
                 <condition id="-14" name="Compare variable" sid="215" type="System">
-                    <param id="0" name="Variable">Waiting</param>
+                    <param id="0" name="Variable">Waiting2</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="216" type="System">
-                    <param id="0" name="Variable">Waiting</param>
+                    <param id="0" name="Variable">Waiting2</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action behavior="Physics" id="0" name="Apply force" sid="217" type="LeftJouster">
-                    <param id="0" name="Force X">7</param>
+                    <param id="0" name="Force X">6</param>
                     <param id="1" name="Force Y">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action behavior="Physics" id="0" name="Apply force" sid="218" type="RightJouster">
-                    <param id="0" name="Force X">-7</param>
+                    <param id="0" name="Force X">-6</param>
                     <param id="1" name="Force Y">0</param>
                     <param id="2" name="Image point">0</param>
                 </action>
@@ -228,11 +241,7 @@
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="240" type="System">
-                    <param id="0" name="Variable">Waiting</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="241" type="System">
-                    <param id="0" name="Variable">Waiting</param>
+                    <param id="0" name="Variable">Waiting2</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="0" name="Set text" sid="242" type="Status">
@@ -262,6 +271,140 @@
                 </action>
                 <action id="-16" name="Wait" sid="250" type="System">
                     <param id="0" name="Seconds">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="266">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="272" type="XbowBolt">
+                    <param id="0" name="Object">RightJouster</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="274" type="XbowBolt">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="275" type="RightJouster">
+                    <param id="0" name="Impulse X">10</param>
+                    <param id="1" name="Implulse Y">10</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="9" name="Set angular velocity" sid="276" type="RightJouster">
+                    <param id="0" name="Angular velocity">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="277">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="278" type="XbowBolt">
+                    <param id="0" name="Object">LeftJouster</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="279" type="XbowBolt">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="280" type="LeftJouster">
+                    <param id="0" name="Impulse X">-10</param>
+                    <param id="1" name="Implulse Y">10</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="9" name="Set angular velocity" sid="281" type="LeftJouster">
+                    <param id="0" name="Angular velocity">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="305">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="306" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="307" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;Lance&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="308">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="309" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="310" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;Xbow&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="311">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="312" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="313" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;Hammer&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="314">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="315" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="316" type="RightJouster">
+                    <param id="0" name="Animation">&quot;Lance&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="317">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="318" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="319" type="RightJouster">
+                    <param id="0" name="Animation">&quot;Xbow&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="320">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="321" type="RightJouster">
+                    <param id="0" name="Instance variable">WeaponType</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="322" type="RightJouster">
+                    <param id="0" name="Animation">&quot;Hammer&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>

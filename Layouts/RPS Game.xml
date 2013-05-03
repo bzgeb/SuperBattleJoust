@@ -35,7 +35,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>0</WeaponType>
+                        <WeaponType>3</WeaponType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -55,7 +55,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>59</x>
+                        <x>129</x>
                         <y>430</y>
                         <z>0</z>
                         <width>32</width>
@@ -75,7 +75,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>0</WeaponType>
+                        <WeaponType>2</WeaponType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -95,7 +95,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>577</x>
+                        <x>517</x>
                         <y>430</y>
                         <z>0</z>
                         <width>32</width>
@@ -193,6 +193,42 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="XbowBolt" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Owner>0</Owner>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>115</x>
+                        <y>524</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>3</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.666666687</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
