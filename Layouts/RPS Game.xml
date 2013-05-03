@@ -75,7 +75,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>2</WeaponType>
+                        <WeaponType>3</WeaponType>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -229,6 +229,27 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.666666687</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HammerSwipe" uid="12">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>179</x>
+                        <y>551</y>
+                        <z>0</z>
+                        <width>19</width>
+                        <height>34</height>
+                        <depth>0</depth>
+                        <hotspotX>0.578947365</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
