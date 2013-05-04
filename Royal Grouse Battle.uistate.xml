@@ -10,8 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>RPS Game</layout>
-        <event-sheet active="1">RPS Sheet</event-sheet>
+        <layout active="1">Game</layout>
+        <event-sheet>Game Sheet</event-sheet>
+        <event-sheet>Game Sheet2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

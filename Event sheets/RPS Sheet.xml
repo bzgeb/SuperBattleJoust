@@ -35,7 +35,7 @@
                     <param id="0" name="Max Speed">1100</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="386" type="LeftJouster2">
-                    <param id="0" name="Vector X">1100</param>
+                    <param id="0" name="Vector X">1100 * ((Clamp(LeftJouster2.Angle, 0, 2) - 1) * (-1))</param>
                 </action>
                 <action behavior="Platform" id="9" name="Set vector Y" sid="431" type="LeftJouster2">
                     <param id="0" name="Vector Y">0</param>
@@ -79,6 +79,9 @@
                 <action id="-10" name="Set value" sid="265" type="XbowBolt">
                     <param id="0" name="Instance variable">Owner</param>
                     <param id="1" name="Value">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="501" type="XbowBolt">
+                    <param id="0" name="Angle">LeftJouster2.Angle</param>
                 </action>
             </actions>
         </event-block>
@@ -178,7 +181,7 @@
                     <param id="0" name="Max Speed">1100</param>
                 </action>
                 <action behavior="Platform" id="8" name="Set vector X" sid="390" type="RightJouster2">
-                    <param id="0" name="Vector X">-1100</param>
+                    <param id="0" name="Vector X">-1100 * ((Clamp(RightJouster2.Angle, 0, 2) - 1) * (-1))</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="416" type="RightJouster2">
                     <param id="0" name="Instance variable">Charging</param>
@@ -220,7 +223,7 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-8" name="Set angle" sid="286" type="XbowBolt">
-                    <param id="0" name="Angle">180</param>
+                    <param id="0" name="Angle">180 - RightJouster2.Angle</param>
                 </action>
                 <action id="-10" name="Set value" sid="287" type="XbowBolt">
                     <param id="0" name="Instance variable">Owner</param>
@@ -486,6 +489,12 @@
                 <action behavior="Platform" id="7" name="Simulate control" sid="379" type="LeftJouster2">
                     <param id="0" name="Control">1</param>
                 </action>
+                <action id="-8" name="Set angle" sid="491" type="LeftJouster2">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="492" type="LeftJouster2">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="338">
@@ -497,6 +506,12 @@
             <actions>
                 <action behavior="Platform" id="7" name="Simulate control" sid="380" type="LeftJouster2">
                     <param id="0" name="Control">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="489" type="LeftJouster2">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="8" name="Set flipped" sid="490" type="LeftJouster2">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>
@@ -569,6 +584,36 @@
                 <action id="-10" name="Set value" sid="429" type="XbowBolt">
                     <param id="0" name="Instance variable">Owner</param>
                     <param id="1" name="Value">1 - XbowBolt.Owner</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="493">
+            <conditions>
+                <condition id="2" name="Key is down" sid="494" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="498" type="RightJouster2">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action id="8" name="Set flipped" sid="497" type="RightJouster2">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="495">
+            <conditions>
+                <condition id="2" name="Key is down" sid="496" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="500" type="RightJouster2">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="8" name="Set flipped" sid="499" type="RightJouster2">
+                    <param id="0" name="State">0</param>
                 </action>
             </actions>
         </event-block>

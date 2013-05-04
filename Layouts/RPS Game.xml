@@ -265,7 +265,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>3</WeaponType>
+                        <WeaponType>2</WeaponType>
                         <Charging>false</Charging>
                     </instance-variables>
                     <behavior-instances>
