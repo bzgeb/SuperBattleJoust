@@ -350,7 +350,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="991" type="Winner">
-                    <param id="0" name="Text">&quot;WINNER: &quot; &amp; PushBattleWinner</param>
+                    <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; PushBattleWinner</param>
                 </action>
                 <action id="-16" name="Wait" sid="995" type="System">
                     <param id="0" name="Seconds">1</param>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>PidgeonSheet</name>
     <events>
+        <variable constant="0" name="PidgeonWinner" sid="1131" static="0" type="number">0</variable>
         <event-block sid="1062">
             <conditions>
                 <condition id="2" name="Key is down" sid="1063" type="Keyboard">
@@ -41,6 +42,55 @@
                 </action>
                 <action id="-8" name="Set angle" sid="1075" type="Bullet">
                     <param id="0" name="Angle">LeftSlingPointer.Angle - 90</param>
+                </action>
+                <action id="-10" name="Set value" sid="1130" type="Bullet">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1144">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1145" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="1146" type="RightSlingPointer">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1147">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1148" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="1149" type="RightSlingPointer">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1150">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1151" type="Keyboard">
+                    <param id="0" name="Key">38 (Up arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1152" type="RightSlingPointer">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1153" type="Bullet">
+                    <param id="0" name="Angle">RightSlingPointer.Angle - 90</param>
+                </action>
+                <action id="-10" name="Set value" sid="1154" type="Bullet">
+                    <param id="0" name="Instance variable">Owner</param>
+                    <param id="1" name="Value">2</param>
                 </action>
             </actions>
         </event-block>
@@ -91,6 +141,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="1132" type="System">
+                    <param id="0" name="Variable">PidgeonWinner</param>
+                    <param id="1" name="Value">Bullet.Owner</param>
+                </action>
                 <action id="-9" name="Destroy" sid="1096" type="Pidgeon" />
                 <action id="-9" name="Destroy" sid="1097" type="Bullet" />
             </actions>
@@ -121,6 +175,38 @@
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="1135">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1136" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1137" type="PidgeonWinnerText">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="1143" type="System">
+                    <param id="0" name="Variable">PidgeonWinner</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1138">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1139" type="System">
+                    <param id="0" name="Variable">PidgeonWinner</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1140" type="PidgeonWinnerText">
+                    <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; PidgeonWinner</param>
+                </action>
+                <action id="-16" name="Wait" sid="1142" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="1141" type="System" />
             </actions>
         </event-block>
     </events>

@@ -95,14 +95,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>421</y>
+                        <x>209</x>
+                        <y>523</y>
                         <z>0</z>
-                        <width>128</width>
-                        <height>128</height>
+                        <width>45</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.50390625</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -189,6 +189,54 @@
                         <depth>0</depth>
                         <hotspotX>0.504000008</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PidgeonWinnerText" uid="40">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-37,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>400</x>
+                        <y>157</y>
+                        <z>0</z>
+                        <width>800</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightSlingPointer" uid="41">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>595</x>
+                        <y>522</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

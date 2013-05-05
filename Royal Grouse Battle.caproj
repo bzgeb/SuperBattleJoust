@@ -6,7 +6,7 @@
     <author>Bronson Zgeb</author>
     <unique-id>185607nu7fh1x</unique-id>
     <saved-with-version>12600</saved-with-version>
-    <next-sid>1130</next-sid>
+    <next-sid>1162</next-sid>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -44,7 +44,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">iPhone only</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="LeftJouster" sid="2">
             <plugin id="Sprite" />
             <instance-variables>
@@ -1165,6 +1165,9 @@
         <object-type name="LeftSlingPointer" sid="1058">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Bird" pingpong="0" repeatcount="1" repeatto="0" sid="1158" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1059" speed="5">
                     <frame duration="1" hotspotX="0.503906" hotspotY="1" />
                 </animation>
@@ -1242,6 +1245,20 @@
                             <point x="0.408" y="0.540541" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PidgeonWinnerText" sid="1134">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="RightSlingPointer" sid="1155">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Bird" pingpong="0" repeatcount="1" repeatto="0" sid="1157" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1156" speed="5">
+                    <frame duration="1" hotspotX="0.503906" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>

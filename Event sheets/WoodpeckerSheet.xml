@@ -144,7 +144,7 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="1053" type="WinnerText">
-                    <param id="0" name="Text">&quot;Winner: &quot; &amp; WoodpeckerWinner</param>
+                    <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; WoodpeckerWinner</param>
                 </action>
             </actions>
         </event-block>

@@ -45,7 +45,7 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="0" name="Set text" sid="147" type="Winner">
-                    <param id="0" name="Text">&quot;WINNER: &quot; &amp; JabWinner</param>
+                    <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; JabWinner</param>
                 </action>
                 <action id="-16" name="Wait" sid="148" type="System">
                     <param id="0" name="Seconds">0.7</param>
@@ -73,7 +73,7 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="0" name="Set text" sid="156" type="Winner">
-                    <param id="0" name="Text">&quot;WINNER: &quot; &amp; JabWinner</param>
+                    <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; JabWinner</param>
                 </action>
                 <action id="-16" name="Wait" sid="157" type="System">
                     <param id="0" name="Seconds">0.7</param>
