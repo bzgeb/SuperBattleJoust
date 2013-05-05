@@ -4,8 +4,8 @@
     <sid>175</sid>
     <event-sheet>RPS Sheet</event-sheet>
     <size>
-        <width>640</width>
-        <height>480</height>
+        <width>800</width>
+        <height>600</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -105,8 +105,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>115</x>
-                        <y>524</y>
+                        <x>116</x>
+                        <y>621</y>
                         <z>0</z>
                         <width>8</width>
                         <height>3</height>
@@ -129,8 +129,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>179</x>
-                        <y>551</y>
+                        <x>180</x>
+                        <y>648</y>
                         <z>0</z>
                         <width>19</width>
                         <height>34</height>
@@ -221,7 +221,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>3</WeaponType>
+                        <WeaponType>2</WeaponType>
                         <Charging>false</Charging>
                     </instance-variables>
                     <behavior-instances>
@@ -245,8 +245,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>532</x>
-                        <y>429</y>
+                        <x>702</x>
+                        <y>550</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -265,7 +265,7 @@
                     </properties>
                     <instance-variables>
                         <WeaponPos>0</WeaponPos>
-                        <WeaponType>2</WeaponType>
+                        <WeaponType>1</WeaponType>
                         <Charging>false</Charging>
                     </instance-variables>
                     <behavior-instances>
@@ -290,7 +290,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>147</x>
-                        <y>429</y>
+                        <y>550</y>
                         <z>0</z>
                         <width>32</width>
                         <height>32</height>
@@ -313,10 +313,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>320</x>
-                        <y>463</y>
+                        <x>400</x>
+                        <y>584</y>
                         <z>0</z>
-                        <width>640</width>
+                        <width>800</width>
                         <height>34</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

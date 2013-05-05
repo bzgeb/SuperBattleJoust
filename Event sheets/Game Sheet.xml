@@ -3,46 +3,66 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Sheet</name>
     <events>
+        <variable constant="0" name="JabWinner" sid="862" static="0" type="number">0</variable>
+        <variable constant="0" name="DoJab" sid="851" static="0" type="number">0</variable>
         <variable constant="0" name="Waiting" sid="102" static="0" type="number">1</variable>
-        <event-block sid="103">
+        <event-block sid="795">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="104" type="LeftJouster">
+                <condition id="-7" name="Compare instance variable" sid="796" type="LeftJouster">
                     <param id="0" name="Instance variable">WeaponPos</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="105" type="LeftJouster">
-                    <param id="0" name="Frame number">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="106">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="107" type="LeftJouster">
-                    <param id="0" name="Instance variable">WeaponPos</param>
+                <condition id="-14" inverted="1" name="Compare variable" sid="824" type="System">
+                    <param id="0" name="Variable">Waiting</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="108" type="LeftJouster">
-                    <param id="0" name="Frame number">2</param>
+                <action id="4" name="Set animation" sid="797" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;HighLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="109">
+        <event-block sid="801">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="110" type="LeftJouster">
+                <condition id="-7" name="Compare instance variable" sid="802" type="LeftJouster">
+                    <param id="0" name="Instance variable">WeaponPos</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="823" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="803" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;MidLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="804">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="805" type="LeftJouster">
                     <param id="0" name="Instance variable">WeaponPos</param>
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="822" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="111" type="LeftJouster">
-                    <param id="0" name="Frame number">3</param>
+                <action id="4" name="Set animation" sid="806" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;LowLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -53,10 +73,16 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="821" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="114" type="RightJouster">
-                    <param id="0" name="Frame number">1</param>
+                <action id="4" name="Set animation" sid="114" type="RightJouster">
+                    <param id="0" name="Animation">&quot;HighLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -67,10 +93,16 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="817" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="117" type="RightJouster">
-                    <param id="0" name="Frame number">2</param>
+                <action id="4" name="Set animation" sid="117" type="RightJouster">
+                    <param id="0" name="Animation">&quot;MidLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -81,10 +113,16 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-14" inverted="1" name="Compare variable" sid="818" type="System">
+                    <param id="0" name="Variable">Waiting</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="5" name="Set frame" sid="120" type="RightJouster">
-                    <param id="0" name="Frame number">3</param>
+                <action id="4" name="Set animation" sid="120" type="RightJouster">
+                    <param id="0" name="Animation">&quot;LowLanceWalk&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -201,7 +239,7 @@
                     <param id="0" name="Text">&quot;KILL!&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="147" type="Winner">
-                    <param id="0" name="Text">&quot;WINNER: LEFT&quot;</param>
+                    <param id="0" name="Text">&quot;WINNER: &quot; &amp; JabWinner</param>
                 </action>
                 <action id="-16" name="Wait" sid="148" type="System">
                     <param id="0" name="Seconds">0.7</param>
@@ -247,7 +285,30 @@
                 <condition id="-2" name="On start of layout" sid="161" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="853" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="779" type="LeftBird">
+                    <param id="0" name="Pin to">LeftJouster</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="791" type="RightBird">
+                    <param id="0" name="Pin to">RightJouster</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="819" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;Stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="820" type="RightJouster">
+                    <param id="0" name="Animation">&quot;Stand&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="0" name="Set text" sid="162" type="Winner">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="850" type="Instructions">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="163" type="System">
@@ -272,6 +333,22 @@
                 <action id="-16" name="Wait" sid="169" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
+                <action id="4" name="Set animation" sid="783" type="LeftJouster">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="782" type="LeftBird">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="792" type="RightJouster">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="793" type="RightBird">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="0" name="Set text" sid="170" type="Status">
                     <param id="0" name="Text">&quot;JOUST&quot;</param>
                 </action>
@@ -279,8 +356,99 @@
                     <param id="0" name="Variable">Waiting</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-16" name="Wait" sid="172" type="System">
-                    <param id="0" name="Seconds">1.0</param>
+            </actions>
+        </event-block>
+        <event-block sid="838">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="839" type="System">
+                    <param id="0" name="First value">RightBird.X - LeftBird.X</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">250</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="833" type="System">
+                    <param id="0" name="Time scale">0.01</param>
+                </action>
+                <action id="-20" name="Set layout scale" sid="834" type="System">
+                    <param id="0" name="Scale">2.5</param>
+                </action>
+                <action id="-8" name="Scroll to object" sid="835" type="System">
+                    <param id="0" name="Object">LeftBird</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="840">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="841" type="System">
+                    <param id="0" name="First value">RightBird.X - LeftBird.X</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">150</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-8" name="Scroll to object" sid="846" type="System">
+                    <param id="0" name="Object">RightBird</param>
+                </action>
+                <action id="-16" name="Wait" sid="848" type="System">
+                    <param id="0" name="Seconds">Random(0, 0.01)</param>
+                </action>
+                <action id="0" name="Set text" sid="849" type="Instructions">
+                    <param id="0" name="Text">&quot;JAB!&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="852" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="854">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="855" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="856" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="860" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="863" type="System">
+                    <param id="0" name="Variable">JabWinner</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="865" type="Instructions">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="857">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="858" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="859" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="861" type="System">
+                    <param id="0" name="Variable">DoJab</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="864" type="System">
+                    <param id="0" name="Variable">JabWinner</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Set text" sid="866" type="Instructions">
+                    <param id="0" name="Text">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
