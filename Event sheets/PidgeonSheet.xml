@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PidgeonSheet</name>
+    <events>
+        <event-block sid="1062">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1063" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="1064" type="LeftSlingPointer">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1065">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1066" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="1067" type="LeftSlingPointer">
+                    <param id="0" name="Degrees">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1072">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="1073" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1074" type="LeftSlingPointer">
+                    <param id="0" name="Object">Bullet</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1075" type="Bullet">
+                    <param id="0" name="Angle">LeftSlingPointer.Angle - 90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1083">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1084" type="System" />
+            </conditions>
+            <actions>
+                <action id="-17" name="Move forward" sid="1085" type="Pidgeon">
+                    <param id="0" name="Distance">Pidgeon.Speed * timescale * Pidgeon.Direction</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1086">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1087" type="Pidgeon">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1088" type="Pidgeon">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1089">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1093" type="Pidgeon">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="1091" type="Pidgeon">
+                    <param id="0" name="Animation">&quot;Reverse&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1094">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1095" type="Bullet">
+                    <param id="0" name="Object">Pidgeon</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1096" type="Pidgeon" />
+                <action id="-9" name="Destroy" sid="1097" type="Bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="1122">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1123" type="Pidgeon">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">790</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1124" type="Pidgeon">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1125">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1126" type="Pidgeon">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1127" type="Pidgeon">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

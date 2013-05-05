@@ -160,6 +160,11 @@
             <conditions>
                 <condition id="-4" name="Is outside layout" sid="940" type="LeftArrow" />
                 <condition id="-4" name="Is outside layout" sid="942" type="RightArrow" />
+                <condition id="-14" name="Compare variable" sid="980" type="System">
+                    <param id="0" name="Variable">ArcheryWinner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="943" type="System">

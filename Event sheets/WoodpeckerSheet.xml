@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>WoodpeckerSheet</name>
+    <events>
+        <variable constant="0" name="WoodpeckerWinner" sid="1003" static="0" type="number">0</variable>
+        <event-block sid="1004">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1005" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1006" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="1050" type="WinnerText">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1017">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1018" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1020" type="LeftWoodpecker">
+                    <param id="0" name="Instance variable">Charging</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="1027" type="LeftWoodpecker">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">1 * timescale</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1021">
+            <conditions>
+                <condition id="3" name="On key released" sid="1022" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1029" type="LeftTree">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">LeftWoodpecker.Damage</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1023" type="LeftWoodpecker">
+                    <param id="0" name="Instance variable">Charging</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1028" type="LeftWoodpecker">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1040">
+            <conditions>
+                <condition id="2" name="Key is down" sid="1041" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="1042" type="RightWoodpecker">
+                    <param id="0" name="Instance variable">Charging</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-11" name="Add to" sid="1043" type="RightWoodpecker">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">1 * timescale</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1044">
+            <conditions>
+                <condition id="3" name="On key released" sid="1045" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="1046" type="RightTree">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">RightWoodpecker.Damage</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1047" type="RightWoodpecker">
+                    <param id="0" name="Instance variable">Charging</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="1048" type="RightWoodpecker">
+                    <param id="0" name="Instance variable">Damage</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1030">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1031" type="LeftTree">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1033" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1032" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1034">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1035" type="RightTree">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1036" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1037" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1051">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1052" type="System">
+                    <param id="0" name="Variable">WoodpeckerWinner</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1053" type="WinnerText">
+                    <param id="0" name="Text">&quot;Winner: &quot; &amp; WoodpeckerWinner</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
