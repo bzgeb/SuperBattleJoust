@@ -15,11 +15,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Archery</layout>
         <layout>Woodpecker</layout>
         <layout>Pidgeon</layout>
+        <layout>Menu</layout>
         <event-sheet>PushBattleSheet</event-sheet>
-        <event-sheet>JoustSheet</event-sheet>
+        <event-sheet active="1">JoustSheet</event-sheet>
         <event-sheet>ArcherySheet</event-sheet>
-        <event-sheet active="1">WoodpeckerSheet</event-sheet>
+        <event-sheet>WoodpeckerSheet</event-sheet>
         <event-sheet>PidgeonSheet</event-sheet>
+        <event-sheet>MenuSheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="Project settings" />

@@ -33,6 +33,9 @@
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">1 * timescale</param>
                 </action>
+                <action id="-18" name="Rotate clockwise" sid="1218" type="LeftWoodpecker">
+                    <param id="0" name="Degrees">-1 * timescale</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1021">
@@ -54,6 +57,15 @@
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-8" name="Set angle" sid="1219" type="LeftWoodpecker">
+                    <param id="0" name="Angle">10</param>
+                </action>
+                <action id="-16" name="Wait" sid="1220" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1221" type="LeftWoodpecker">
+                    <param id="0" name="Angle">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1040">
@@ -70,6 +82,9 @@
                 <action id="-11" name="Add to" sid="1043" type="RightWoodpecker">
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">1 * timescale</param>
+                </action>
+                <action id="-19" name="Rotate counter-clockwise" sid="1222" type="RightWoodpecker">
+                    <param id="0" name="Degrees">-1 * timescale</param>
                 </action>
             </actions>
         </event-block>
@@ -92,6 +107,15 @@
                     <param id="0" name="Instance variable">Damage</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="-8" name="Set angle" sid="1223" type="RightWoodpecker">
+                    <param id="0" name="Angle">-10</param>
+                </action>
+                <action id="-16" name="Wait" sid="1224" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-8" name="Set angle" sid="1225" type="RightWoodpecker">
+                    <param id="0" name="Angle">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1030">
@@ -111,6 +135,17 @@
                 <action id="-9" name="Set value" sid="1032" type="System">
                     <param id="0" name="Variable">WoodpeckerWinner</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="Physics" id="21" name="Set immovable" sid="1228" type="LeftTree">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="1229" type="LeftTree">
+                    <param id="0" name="Impulse X">20</param>
+                    <param id="1" name="Implulse Y">20</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="6" name="Apply torque" sid="1230" type="LeftTree">
+                    <param id="0" name="Torque">100</param>
                 </action>
             </actions>
         </event-block>
@@ -132,6 +167,17 @@
                     <param id="0" name="Variable">WoodpeckerWinner</param>
                     <param id="1" name="Value">2</param>
                 </action>
+                <action behavior="Physics" id="21" name="Set immovable" sid="1231" type="RightTree">
+                    <param id="0" name="Setting">0</param>
+                </action>
+                <action behavior="Physics" id="3" name="Apply impulse" sid="1232" type="RightTree">
+                    <param id="0" name="Impulse X">-20</param>
+                    <param id="1" name="Implulse Y">20</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Physics" id="6" name="Apply torque" sid="1233" type="RightTree">
+                    <param id="0" name="Torque">-100</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1051">
@@ -145,6 +191,154 @@
             <actions>
                 <action id="0" name="Set text" sid="1053" type="WinnerText">
                     <param id="0" name="Text">&quot;WINNER: Player &quot; &amp; WoodpeckerWinner</param>
+                </action>
+                <action id="-16" name="Wait" sid="1226" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="1169" type="System">
+                    <param id="0" name="Layout">Joust Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1236">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1237" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1255" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">75</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1246" type="LeftTree">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1257">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1258" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">75</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1259" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1260" type="LeftTree">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1248">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1239" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1256" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1245" type="LeftTree">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1250">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1241" type="System">
+                    <param id="0" name="First value">(LeftTree.Health / LeftTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1244" type="LeftTree">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1261">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1262" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">100</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1263" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">75</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1264" type="RightTree">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1265">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1266" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">75</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1267" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1268" type="RightTree">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1269">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1270" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1271" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1272" type="RightTree">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1273">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="1274" type="System">
+                    <param id="0" name="First value">(RightTree.Health / RightTree.MaxHealth) * 100</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1275" type="RightTree">
+                    <param id="0" name="Frame number">3</param>
                 </action>
             </actions>
         </event-block>

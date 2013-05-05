@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuSheet</name>
+    <events>
+        <variable constant="0" name="P2Score" sid="1171" static="0" type="number">0</variable>
+        <variable constant="0" name="P1Score" sid="1170" static="0" type="number">0</variable>
+        <event-block sid="1166">
+            <conditions>
+                <condition id="1" name="On any key pressed" sid="1167" type="Keyboard" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="1168" type="System">
+                    <param id="0" name="Layout">Joust Game</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
